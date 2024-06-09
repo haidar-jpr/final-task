@@ -27,4 +27,8 @@ class AdminController extends Controller {
     public function keputusan(){
         return view('admin.keputusan');
     }
+
+    public function kriteria(){
+        return view('admin.kriteria');
+    }
 }

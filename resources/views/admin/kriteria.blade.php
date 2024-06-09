@@ -67,7 +67,7 @@
         <div class="layout-container">
 
             {{-- ! Sidebar --}}
-            @include('admin.components.sidebar', ['clicked' => 'active', 's' => 'data_pendaftar'])
+            @include('admin.components.sidebar', ['clicked' => 'active', 's' => 'kriteria'])
 
             {{-- ! Layout container --}}
             <!-- Layout container -->
@@ -80,88 +80,103 @@
 
                     <div class="container-xxl flex-grow-1 container-p-y">
 
-                        <h3>Ranking</h3>
+                        <h3>Data Kriteria</h3>
 
-                        {{-- ! Tabel Keputusan --}}
-                        <div class="table-responsive mt-4">
+                        {{-- * Cetak laporan --}}
+                        <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#backDropModal">Tambah Data Kriteria</button>
+
+                        {{-- * Modal --}}
+                        <div class="modal fade" id="backDropModal" data-bs-backdrop="static" tabindex="-1">
+                            <div class="modal-dialog">
+                                <form class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="backDropModalTitle">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col mb-3">
+                                                <label for="nameBackdrop" class="form-label">Name</label>
+                                                <input type="text" id="nameBackdrop" class="form-control"
+                                                    placeholder="Enter Name">
+                                            </div>
+                                        </div>
+                                        <div class="row g-2">
+                                            <div class="col mb-0">
+                                                <label for="emailBackdrop" class="form-label">Email</label>
+                                                <input type="email" id="emailBackdrop" class="form-control"
+                                                    placeholder="xxxx@xxx.xx">
+                                            </div>
+                                            <div class="col mb-0">
+                                                <label for="dobBackdrop" class="form-label">DOB</label>
+                                                <input type="date" id="dobBackdrop" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-label-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        {{-- ! Tabel kriteria --}}
+                        <div class="table-responsive">
                             <table class="table table-bordered" style="width:100%">
                                 <thead>
                                     <tr>
-                                        <th style="text-align: center; width:10%">No</th>
-                                        <th style="width:30%">Nama</th>
-                                        <th style="text-align: center;">Nilai Akhir</th>
-                                        <th style="text-align: center;">Actions</th>
+                                        <th style="text-align: center;">No</th>
+                                        <th style="">Nama</th>
+                                        <th style="">Matakuliah</th>
+                                        <th style="text-align: center;">IPK</th>
+                                        <th style="text-align: center;">Semester</th>
+                                        <th style="text-align: center;">Nilai</th>
+                                        <th style="text-align: center;">Asal Prodi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td style="text-align: center;">1</td>
                                         <td>Albert Cook</td>
-                                        <td style="text-align: center;">4.12</td>
-                                        <td style="text-align: center;">
-                                            <div class="column mb-3">
-                                                <button type="button" class="btn btn-icon me-2 btn-success">
-                                                    <span class="tf-icons bx bx-check"></span>
-                                                  </button>
-                                                  <button type="button" class="btn btn-icon me-2 btn-danger">
-                                                    <span class="tf-icons bx bx-x"></span>
-                                                  </button>
-                                            </div>
-                                        </td>
+                                        <td style="text-align: center;">Web Service Praktik</td>
+                                        <td style="text-align: center;">3.51</td>
+                                        <td style="text-align: center;">6</td>
+                                        <td style="text-align: center;">A</td>
+                                        <td style="text-align: center;">Sistem Informasi</td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: center;">2</td>
-                                        <td>Barry Hunter</td>
-                                        <td style="text-align: center;">4.11</td>
-                                        <td style="text-align: center;">
-                                            <div class="column mb-3">
-                                                <button type="button" class="btn btn-icon me-2 btn-success">
-                                                    <span class="tf-icons bx bx-check"></span>
-                                                  </button>
-                                                  <button type="button" class="btn btn-icon me-2 btn-danger">
-                                                    <span class="tf-icons bx bx-x"></span>
-                                                  </button>
-                                            </div>
-                                        </td>
+                                        <td>Albert Cook</td>
+                                        <td style="text-align: center;">Web Service Praktik</td>
+                                        <td style="text-align: center;">3.51</td>
+                                        <td style="text-align: center;">6</td>
+                                        <td style="text-align: center;">A</td>
+                                        <td style="text-align: center;">Sistem Informasi</td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: center;">3</td>
-                                        <td>Trevor Baker</td>
-                                        <td style="text-align: center;">4.09</td>
-                                        <td style="text-align: center;">
-                                            <div class="column mb-3">
-                                                <button type="button" class="btn btn-icon me-2 btn-success">
-                                                    <span class="tf-icons bx bx-check"></span>
-                                                  </button>
-                                                  <button type="button" class="btn btn-icon me-2 btn-danger">
-                                                    <span class="tf-icons bx bx-x"></span>
-                                                  </button>
-                                            </div>
-                                        </td>
+                                        <td>Albert Cook</td>
+                                        <td style="text-align: center;">Web Service Praktik</td>
+                                        <td style="text-align: center;">3.51</td>
+                                        <td style="text-align: center;">6</td>
+                                        <td style="text-align: center;">A</td>
+                                        <td style="text-align: center;">Sistem Informasi</td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: center;">4</td>
-                                        <td>Jerry Milton</td>
-                                        <td style="text-align: center;">4.08</td>
-                                        <td style="text-align: center;">
-                                            <div class="column mb-3">
-                                                <button type="button" class="btn btn-icon me-2 btn-success">
-                                                    <span class="tf-icons bx bx-check"></span>
-                                                  </button>
-                                                  <button type="button" class="btn btn-icon me-2 btn-danger">
-                                                    <span class="tf-icons bx bx-x"></span>
-                                                  </button>
-                                            </div>
-                                        </td>
+                                        <td>Albert Cook</td>
+                                        <td style="text-align: center;">Web Service Praktik</td>
+                                        <td style="text-align: center;">3.51</td>
+                                        <td style="text-align: center;">6</td>
+                                        <td style="text-align: center;">A</td>
+                                        <td style="text-align: center;">Sistem Informasi</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-
-                        <div class="col" style="display: flex; justify-content: end;">
-                            <a type="button" class="btn btn-primary" href="{{ url('admin/data_pendaftar') }}">Simpan</a>
-                        </div>
-                        
 
                         {{-- ! Data kosong --}}
                         {{-- <div class="empty-message">

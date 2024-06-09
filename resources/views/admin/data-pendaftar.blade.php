@@ -118,10 +118,111 @@
                                         <td style="text-align: center;">A</td>
                                         <td style="text-align: center;">Sistem Informasi</td>
                                         <td><span class="badge bg-label-warning">Pending</span></td>
-                                        <td style="text-align: center;">
+                                        <td>
                                             <div class="column mb-3">
-                                                <button type="button" class="btn btn-warning">Update</button>
-                                                <button type="button" class="btn btn-danger">Hapus</button>
+                                                <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                                    data-bs-target="#basicModal">Update</button>
+
+                                                {{-- * Modal --}}
+                                                <div class="modal fade" id="basicModal" tabindex="-1"
+                                                    aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel1">Edit
+                                                                    Data Pendaftar</h5>
+                                                                <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="row">
+                                                                    <div class="col mb-3">
+                                                                        <label for="nameBasic"
+                                                                            class="form-label">Nama</label>
+                                                                        <input type="text" id="nameBasic"
+                                                                            class="form-control" placeholder="John Doe" disabled>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col g-2">
+                                                                    <div class="col mb-3">
+                                                                        <label class="form-label">Matakuliah</label>
+                                                                        <br>
+                                                                        <select id="currency"
+                                                                            class="select2 form-select">
+                                                                            <option value="">Select Currency
+                                                                            </option>
+                                                                            <option value="usd">USD</option>
+                                                                            <option value="euro">Euro</option>
+                                                                            <option value="pound">Pound</option>
+                                                                            <option value="bitcoin">Bitcoin</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="row g-2">
+                                                                        <div class="col mb-3">
+                                                                            <label for="dobBasic"
+                                                                                class="form-label">IPK</label>
+                                                                            <input type="text"
+                                                                                class="form-control">
+                                                                        </div>
+                                                                        <div class="col mb-3">
+                                                                            <label class="form-label">Semester</label>
+                                                                            <br>
+                                                                            <select id="currency"
+                                                                                class="select2 form-select">
+                                                                                <option value="">Select Currency
+                                                                                </option>
+                                                                                <option value="usd">USD</option>
+                                                                                <option value="euro">Euro</option>
+                                                                                <option value="pound">Pound</option>
+                                                                                <option value="bitcoin">Bitcoin
+                                                                                </option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row g-2">
+                                                                        <div class="col mb-3">
+                                                                            <label class="form-label">Nilai
+                                                                                Matakuliah</label>
+                                                                            <br>
+                                                                            <select id="currency"
+                                                                                class="select2 form-select">
+                                                                                <option value="">Select Currency
+                                                                                </option>
+                                                                                <option value="usd">USD</option>
+                                                                                <option value="euro">Euro</option>
+                                                                                <option value="pound">Pound</option>
+                                                                                <option value="bitcoin">Bitcoin
+                                                                                </option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="col mb-3">
+                                                                            <label class="form-label">Asal
+                                                                                Prodi</label>
+                                                                            <br>
+                                                                            <select id="currency"
+                                                                                class="select2 form-select">
+                                                                                <option value="">Select Currency
+                                                                                </option>
+                                                                                <option value="usd">USD</option>
+                                                                                <option value="euro">Euro</option>
+                                                                                <option value="pound">Pound</option>
+                                                                                <option value="bitcoin">Bitcoin
+                                                                                </option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-label-secondary"
+                                                                    data-bs-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary">Save
+                                                                    changes</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </td>
                                     </tr>
@@ -137,7 +238,6 @@
                                         <td style="text-align: center;">
                                             <div class="column mb-3">
                                                 <button type="button" class="btn btn-warning">Update</button>
-                                                <button type="button" class="btn btn-danger">Hapus</button>
                                             </div>
                                         </td>
                                     </tr>
@@ -153,7 +253,6 @@
                                         <td style="text-align: center;">
                                             <div class="column mb-3">
                                                 <button type="button" class="btn btn-warning">Update</button>
-                                                <button type="button" class="btn btn-danger">Hapus</button>
                                             </div>
                                         </td>
                                     </tr>
@@ -169,7 +268,6 @@
                                         <td style="text-align: center;">
                                             <div class="column mb-3">
                                                 <button type="button" class="btn btn-warning">Update</button>
-                                                <button type="button" class="btn btn-danger">Hapus</button>
                                             </div>
                                         </td>
                                     </tr>
@@ -195,6 +293,52 @@
         </div>
         <div class="layout-overlay layout-menu-toggle"></div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var dropdownItems = document.querySelectorAll('#dropdownMenuButton2 li');
+            var output = document.getElementById('output2');
+
+            dropdownItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    output.textContent = this.textContent;
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var dropdownItems = document.querySelectorAll('#dropdownMenuButton3 li');
+            var output = document.getElementById('output3');
+
+            dropdownItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    output.textContent = this.textContent;
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var dropdownItems = document.querySelectorAll('#dropdownMenuButton4 li');
+            var output = document.getElementById('output4');
+
+            dropdownItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    output.textContent = this.textContent;
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var dropdownItems = document.querySelectorAll('#dropdownMenuButton5 li');
+            var output = document.getElementById('output5');
+
+            dropdownItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    output.textContent = this.textContent;
+                });
+            });
+        });
+    </script>
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->

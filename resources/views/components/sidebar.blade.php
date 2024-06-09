@@ -60,7 +60,7 @@
             <!-- Dashboard -->
             
             <li class="menu-item {{ ($s === "dashboard") ? "active" : "" }}">
-                <a href="{{ url('home') }}" class="menu-link">
+                <a href="{{ url('dashboard') }}" class="menu-link">
                     <i class="menu-icon tf-icons bx bx-home-alt"></i>
                     <div>Dashboard</div>
                 </a>

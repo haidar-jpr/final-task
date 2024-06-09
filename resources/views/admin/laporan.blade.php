@@ -85,22 +85,22 @@
                         <div class="column mb-3">
                             {{-- * Status mahasiswa --}}
                             <div class="btn-group me-3">
-                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="output"
                                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Status Mahasiswa
                                 </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdownMenuButton">
                                     <li class="dropdown-item">Mahasiswa diterima</li>
                                     <li class="dropdown-item">Semua Pendaftar</li>
                                 </ul>
                             </div>
                             {{-- * Matakuliah yang dipilih --}}
                             <div class="btn-group me-3">
-                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="output2"
                                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Matakuliah
                                 </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdownMenuButton2">
                                     <li class="dropdown-item">Pemrograman Berorientasi Object Praktik</li>
                                     <li class="dropdown-item">Web Service Praktik</li>
                                     <li class="dropdown-item">Design Web</li>
@@ -185,6 +185,30 @@
         </div>
         <div class="layout-overlay layout-menu-toggle"></div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var dropdownItems = document.querySelectorAll('#dropdownMenuButton li');
+            var output = document.getElementById('output');
+
+            dropdownItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    output.textContent = this.textContent;
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var dropdownItems = document.querySelectorAll('#dropdownMenuButton2 li');
+            var output = document.getElementById('output2');
+
+            dropdownItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    output.textContent = this.textContent;
+                });
+            });
+        });
+    </script>
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->

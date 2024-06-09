@@ -78,7 +78,9 @@
                     <!-- Content -->
 
                     <div class="container-xxl flex-grow-1 container-p-y">
-                        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"><a href="{{ url('pendaftaran') }}">Daftar Matakuliah</a> /</span> Form Pendaftaran Algoritma & Struktur Data Praktik</h4>
+                        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"><a
+                                    href="{{ url('pendaftaran') }}">Daftar Matakuliah</a> /</span> Form Pendaftaran
+                            Algoritma & Struktur Data Praktik</h4>
 
                         <form action="">
                             <div class="card mb-4">
@@ -92,54 +94,64 @@
                                                 <label for="defaultFormControlInput" class="form-label">Nama
                                                     Lengkap</label>
                                                 <input type="text" class="form-control" id="nama" name="nama"
-                                                    placeholder="John Doe" aria-describedby="defaultFormControlHelp" />
+                                                    placeholder="John Doe" aria-describedby="defaultFormControlHelp" disabled/>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="defaultFormControlInput" class="form-label">Email</label>
                                                 <input type="text" class="form-control" id="email" name="email"
                                                     placeholder="contoh9@gmail.com"
-                                                    aria-describedby="defaultFormControlHelp" />
+                                                    aria-describedby="defaultFormControlHelp" disabled/>
                                             </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="mb-3">
-                                                <label for="pilih2" class="form-label">Pernah Asistensi?</label>
-                                                <select class="form-select" id="pilih2" name="pilih2"
-                                                    aria-label="Default select example">
-                                                    <option selected class="text-center">-- Pilih --</option>
-                                                    <option value="ya">Ya</option>
-                                                    <option value="tidak">Tidak</option>
-                                                </select>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="formFile" class="form-label">Upload Bukti Surat Asistensi</label>
-                                                <input class="form-control" type="file" id="formFile" />
-                                              </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
                                             <div class="mb-3">
                                                 <label for="ipk" class="form-label">IPK</label>
                                                 <input type="number" class="form-control" id="ipk" name="ipk"
                                                     placeholder="3.XX" aria-describedby="defaultFormControlHelp" />
                                             </div>
                                             <div class="mb-3">
-                                                <label for="semester" class="form-label">Semester</label>
+                                                <label for="semester" class="form-label">Angkatan</label>
                                                 <select class="form-select" id="semester" name="semester"
                                                     aria-label="Default select example">
                                                     <option selected class="text-center">-- Pilih --</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                    <option value="9">Alumni - S1</option>
+                                                    <option value="2023">2023</option>
+                                                    <option value="2022">2022</option>
+                                                    <option value="2021">2021</option>
+                                                    <option value="2020">2020</option>
+                                                    <option value="2019">2019</option>
+                                                    <option value="2018">2018</option>
+                                                    <option value="2017">Alumni - S1</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="pilih2" class="form-label">Pernah Asistensi?</label>
+                                                <select class="form-select" id="pilih2" name="pilih2"
+                                                    aria-label="Default select example" onchange="checkSelection()">
+                                                    <option selected class="text-center">-- Pilih --</option>
+                                                    <option value="ya">Ya</option>
+                                                    <option value="tidak">Tidak</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="col">
+                                            <div class="mb-3">
+                                                <label for="pilih2" class="form-label">Nama Matakuliah</label>
+                                                <select class="form-select" id="pilih3" name="pilih2"
+                                                    aria-label="Default select example" disabled>
+                                                    <option selected class="text-center">-- Pilih --</option>
+                                                    <option value="">Algoritma & Struktur Data Praktik</option>
+                                                    <option value="">A</option>
+                                                    <option value="">B</option>
+                                                    <option value="">C</option>
+                                                    <option value="">D</option>
+                                                    <option value="">E</option>
+                                                    <option value="">F</option>
+                                                    <option value="">G</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="formFile" class="form-label">Upload Bukti Surat
+                                                    Asistensi</label>
+                                                <input class="form-control" type="file" id="formFile" />
+                                            </div>
                                             <div class="mb-3">
                                                 <label for="nilai" class="form-label">Nilai Matakuliah</label>
                                                 <select class="form-select" id="nilai" name="nilai"
@@ -162,9 +174,14 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col">
+                                        </div>
+                                        <div class="col">
+                                        </div>
+                                    </div>
                                     <div class="row d-flex justify-content-end mb-4">
-                                        <button type="button"
-                                            class="btn rounded-pill btn-primary col-md-2 me-2">SIMPAN</button>
+                                        <button type="button" class="btn btn-primary col-md-2 me-2">Simpan</button>
                                     </div>
 
                                 </div>
@@ -191,6 +208,19 @@
         <div class="layout-overlay layout-menu-toggle"></div>
     </div>
     <!-- / Layout wrapper -->
+
+    <script>
+        function checkSelection() {
+            var firstSelect = document.getElementById('pilih2');
+            var secondSelect = document.getElementById('pilih3');
+
+            if (firstSelect.value === 'ya') {
+                secondSelect.disabled = false;
+            } else {
+                secondSelect.disabled = true;
+            }
+        }
+    </script>
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->

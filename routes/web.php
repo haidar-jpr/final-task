@@ -21,7 +21,7 @@ Route::controller(AuthController::class)->group(function () {
 
 //Normal Users Routes List
 Route::middleware(['auth', 'user-access:user'])->group(function () {
-    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
 
     Route::get('/pendaftaran', [HomeController::class, 'pendaftaran'])->name('pendaftaran');
 
@@ -56,6 +56,8 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::get('/admin/detail_perhitungan', [AdminController::class, 'perhitungan'])->name('admin/detail_perhitungan');
     
     Route::get('/admin/keputusan', [AdminController::class, 'keputusan'])->name('admin/keputusan');
+
+    Route::get('/admin/kriteria', [AdminController::class, 'kriteria'])->name('admin/kriteria');
 
     // Route::get('/admin/profile', [AdminController::class, 'profilepage'])->name('admin/profile');
 });
