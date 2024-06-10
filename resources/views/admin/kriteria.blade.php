@@ -82,46 +82,37 @@
 
                         <h3>Data Kriteria</h3>
 
-                        {{-- * Cetak laporan --}}
-                        <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#backDropModal">Tambah Data Kriteria</button>
+                        {{-- ! Button tambah kriteria --}}
+                        <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                            data-bs-target="#backDropModal">Tambah Data Kriteria</button>
 
-                        {{-- * Modal --}}
+                        {{-- ! Modal tambah kriteria --}}
                         <div class="modal fade" id="backDropModal" data-bs-backdrop="static" tabindex="-1">
                             <div class="modal-dialog">
-                                <form class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="backDropModalTitle">Modal title</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
+                              <form class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="backDropModalTitle">Tambah kriteria</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="row">
+                                    <div class="col mb-3">
+                                      <label for="nameBackdrop" class="form-label">Nama Kriteria</label>
+                                      <input type="text" id="nameBackdrop" class="form-control" placeholder="Masukkan nama">
                                     </div>
-                                    <div class="modal-body">
-                                        <div class="row">
-                                            <div class="col mb-3">
-                                                <label for="nameBackdrop" class="form-label">Name</label>
-                                                <input type="text" id="nameBackdrop" class="form-control"
-                                                    placeholder="Enter Name">
-                                            </div>
-                                        </div>
-                                        <div class="row g-2">
-                                            <div class="col mb-0">
-                                                <label for="emailBackdrop" class="form-label">Email</label>
-                                                <input type="email" id="emailBackdrop" class="form-control"
-                                                    placeholder="xxxx@xxx.xx">
-                                            </div>
-                                            <div class="col mb-0">
-                                                <label for="dobBackdrop" class="form-label">DOB</label>
-                                                <input type="date" id="dobBackdrop" class="form-control">
-                                            </div>
-                                        </div>
+                                  </div>
+                                    <div class="col mb-3">
+                                      <label for="emailBackdrop" class="form-label">Faktor</label>
+                                      <input type="text" id="emailBackdrop" class="form-control" placeholder="Core">
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-label-secondary"
-                                            data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save</button>
-                                    </div>
-                                </form>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-primary">Simpan</button>
+                                </div>
+                              </form>
                             </div>
-                        </div>
+                          </div>
 
                         {{-- ! Tabel kriteria --}}
                         <div class="table-responsive">
@@ -129,50 +120,49 @@
                                 <thead>
                                     <tr>
                                         <th style="text-align: center;">No</th>
-                                        <th style="">Nama</th>
-                                        <th style="">Matakuliah</th>
-                                        <th style="text-align: center;">IPK</th>
-                                        <th style="text-align: center;">Semester</th>
-                                        <th style="text-align: center;">Nilai</th>
-                                        <th style="text-align: center;">Asal Prodi</th>
+                                        <th style="">Nama kriteria</th>
+                                        <th style="">Faktor</th>
+                                        <th style="text-align: center">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td style="text-align: center;">1</td>
-                                        <td>Albert Cook</td>
-                                        <td style="text-align: center;">Web Service Praktik</td>
-                                        <td style="text-align: center;">3.51</td>
-                                        <td style="text-align: center;">6</td>
-                                        <td style="text-align: center;">A</td>
-                                        <td style="text-align: center;">Sistem Informasi</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: center;">2</td>
-                                        <td>Albert Cook</td>
-                                        <td style="text-align: center;">Web Service Praktik</td>
-                                        <td style="text-align: center;">3.51</td>
-                                        <td style="text-align: center;">6</td>
-                                        <td style="text-align: center;">A</td>
-                                        <td style="text-align: center;">Sistem Informasi</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: center;">3</td>
-                                        <td>Albert Cook</td>
-                                        <td style="text-align: center;">Web Service Praktik</td>
-                                        <td style="text-align: center;">3.51</td>
-                                        <td style="text-align: center;">6</td>
-                                        <td style="text-align: center;">A</td>
-                                        <td style="text-align: center;">Sistem Informasi</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: center;">4</td>
-                                        <td>Albert Cook</td>
-                                        <td style="text-align: center;">Web Service Praktik</td>
-                                        <td style="text-align: center;">3.51</td>
-                                        <td style="text-align: center;">6</td>
-                                        <td style="text-align: center;">A</td>
-                                        <td style="text-align: center;">Sistem Informasi</td>
+                                        <td>IPK</td>
+                                        <td>Core</td>
+                                        <td style="display: flex; justify-content: center; align-items: center;">
+                                            <div>
+                                                <button type="button" class="btn btn-warning ms-auto" data-bs-toggle="modal" data-bs-target="#backDropModal2">Update</button>
+
+                                            {{-- ! Modal tambah kriteria --}}
+                                            <div class="modal fade" id="backDropModal2" data-bs-backdrop="static" tabindex="-1">
+                                                <div class="modal-dialog">
+                                                <form class="modal-content">
+                                                    <div class="modal-header">
+                                                    <h5 class="modal-title" id="backDropModalTitle">Update kriteria</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col mb-3">
+                                                        <label for="nameBackdrop" class="form-label">Nama Kriteria</label>
+                                                        <input type="text" id="nameBackdrop" class="form-control" placeholder="Masukkan nama">
+                                                        </div>
+                                                    </div>
+                                                        <div class="col mb-3">
+                                                        <label for="emailBackdrop" class="form-label">Faktor</label>
+                                                        <input type="text" id="emailBackdrop" class="form-control" placeholder="Core">
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                    <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">Update</button>
+                                                    </div>
+                                                </form>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>

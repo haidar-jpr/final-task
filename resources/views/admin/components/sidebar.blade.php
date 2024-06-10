@@ -86,7 +86,7 @@
             <li class="menu-item {{ ($s === "faktor") ? "active" : "" }}">
                 <a href="{{ url('admin/faktor') }}" class="menu-link">
                     {{-- <i class="menu-icon tf-icons bx bx-report bx-md"></i> --}}
-                    <i class="menu-icon tf-icons bx bx-spreadsheet"></i>
+                    <i class="menu-icon tf-icons bx bx-data"></i>
                     <div>Data Faktor</div>
                 </a>
             </li>

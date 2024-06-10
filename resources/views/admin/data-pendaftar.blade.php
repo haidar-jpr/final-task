@@ -99,9 +99,9 @@
                                     <tr>
                                         <th style="text-align: center;">No</th>
                                         <th style="">Nama</th>
-                                        <th style="">Matakuliah</th>
+                                        <th style="">Matakuliah dipilih </th>
                                         <th style="text-align: center;">IPK</th>
-                                        <th style="text-align: center;">Semester</th>
+                                        <th style="text-align: center;">Tahun Angkatan</th>
                                         <th style="text-align: center;">Nilai</th>
                                         <th style="text-align: center;">Asal Prodi</th>
                                         <th>Status</th>
@@ -114,13 +114,13 @@
                                         <td>Albert Cook</td>
                                         <td style="text-align: center;">Web Service Praktik</td>
                                         <td style="text-align: center;">3.51</td>
-                                        <td style="text-align: center;">6</td>
+                                        <td style="text-align: center;">2020</td>
                                         <td style="text-align: center;">A</td>
                                         <td style="text-align: center;">Sistem Informasi</td>
                                         <td><span class="badge bg-label-warning">Pending</span></td>
-                                        <td>
-                                            <div class="column mb-3">
-                                                <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                        <td style="display: flex; justify-content: center; align-items: center;">
+                                            <div class="column">
+                                                <button type="button" class="btn btn-warning ms-auto" data-bs-toggle="modal"
                                                     data-bs-target="#basicModal">Update</button>
 
                                                 {{-- * Modal --}}
@@ -149,33 +149,35 @@
                                                                         <br>
                                                                         <select id="currency"
                                                                             class="select2 form-select">
-                                                                            <option value="">Select Currency
+                                                                            <option value="" style="text-align: center">-- Pilih Matakuliah --
                                                                             </option>
-                                                                            <option value="usd">USD</option>
-                                                                            <option value="euro">Euro</option>
-                                                                            <option value="pound">Pound</option>
-                                                                            <option value="bitcoin">Bitcoin</option>
+                                                                            <option value=""></option>
+                                                                            <option value=""></option>
+                                                                            <option value=""></option>
+                                                                            <option value=""></option>
                                                                         </select>
                                                                     </div>
                                                                     <div class="row g-2">
                                                                         <div class="col mb-3">
                                                                             <label for="dobBasic"
                                                                                 class="form-label">IPK</label>
-                                                                            <input type="text"
+                                                                            <input type="number"
                                                                                 class="form-control">
                                                                         </div>
                                                                         <div class="col mb-3">
-                                                                            <label class="form-label">Semester</label>
+                                                                            <label class="form-label">Angkatan</label>
                                                                             <br>
                                                                             <select id="currency"
                                                                                 class="select2 form-select">
-                                                                                <option value="">Select Currency
+                                                                                <option value="" style="text-align: center">-- Pilih Tahun --
                                                                                 </option>
-                                                                                <option value="usd">USD</option>
-                                                                                <option value="euro">Euro</option>
-                                                                                <option value="pound">Pound</option>
-                                                                                <option value="bitcoin">Bitcoin
-                                                                                </option>
+                                                                                <option value="2023">2023</option>
+                                                                                <option value="2022">2022</option>
+                                                                                <option value="2021">2021</option>
+                                                                                <option value="2020">2020</option>
+                                                                                <option value="2019">2019</option>
+                                                                                <option value="2018">2018</option>
+                                                                                <option value="2017">Alumni - S1</option>
                                                                             </select>
                                                                         </div>
                                                                     </div>
@@ -186,28 +188,25 @@
                                                                             <br>
                                                                             <select id="currency"
                                                                                 class="select2 form-select">
-                                                                                <option value="">Select Currency
+                                                                                <option value="" style="text-align: center">-- Pilih Nilai --
                                                                                 </option>
-                                                                                <option value="usd">USD</option>
-                                                                                <option value="euro">Euro</option>
-                                                                                <option value="pound">Pound</option>
-                                                                                <option value="bitcoin">Bitcoin
+                                                                                <option value=""></option>
+                                                                                <option value=""></option>
+                                                                                <option value=""></option>
+                                                                                <option value="">
                                                                                 </option>
                                                                             </select>
                                                                         </div>
                                                                         <div class="col mb-3">
-                                                                            <label class="form-label">Asal
-                                                                                Prodi</label>
+                                                                            <label class="form-label">Asal Prodi</label>
                                                                             <br>
                                                                             <select id="currency"
                                                                                 class="select2 form-select">
-                                                                                <option value="">Select Currency
-                                                                                </option>
-                                                                                <option value="usd">USD</option>
-                                                                                <option value="euro">Euro</option>
-                                                                                <option value="pound">Pound</option>
-                                                                                <option value="bitcoin">Bitcoin
-                                                                                </option>
+                                                                                <option value="" style="text-align: center">-- Pilih Prodi --</option>
+                                                                                <option value="SI">Sistem Informasi</option>
+                                                                                <option value="IF">Informatika</option>
+                                                                                <option value="TI">Teknologi Informasi</option>
+                                                                                <option value="SD">Sains Data</option>
                                                                             </select>
                                                                         </div>
                                                                     </div>
@@ -217,8 +216,7 @@
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-label-secondary"
                                                                     data-bs-dismiss="modal">Close</button>
-                                                                <button type="button" class="btn btn-primary">Save
-                                                                    changes</button>
+                                                                <button type="button" class="btn btn-primary">Simpan Perubahan</button>
                                                             </div>
                                                         </div>
                                                     </div>

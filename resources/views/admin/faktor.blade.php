@@ -83,7 +83,7 @@
                         <h3>Data Faktor</h3>
 
                         {{-- ! Card informasi --}}
-                        <div class="col-md mb-3 mt-5">
+                        <div class="col-md mb-3">
                             <div class="card text-white bg-info">
                                 <div class="card-header fs-large fw-semibold">List Faktor</div>
                                 <div class="card-body">

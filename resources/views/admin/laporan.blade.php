@@ -119,9 +119,9 @@
                                     <tr>
                                         <th style="text-align: center;">No</th>
                                         <th style="">Nama</th>
-                                        <th style="">Matakuliah</th>
+                                        <th style="">Matakuliah dipilih</th>
                                         <th style="text-align: center;">IPK</th>
-                                        <th style="text-align: center;">Semester</th>
+                                        <th style="text-align: center;">Angkatan</th>
                                         <th style="text-align: center;">Nilai</th>
                                         <th style="text-align: center;">Asal Prodi</th>
                                     </tr>
@@ -130,36 +130,36 @@
                                     <tr>
                                         <td style="text-align: center;">1</td>
                                         <td>Albert Cook</td>
-                                        <td style="text-align: center;">Web Service Praktik</td>
+                                        <td>Web Service Praktik</td>
                                         <td style="text-align: center;">3.51</td>
-                                        <td style="text-align: center;">6</td>
+                                        <td style="text-align: center;">2020</td>
                                         <td style="text-align: center;">A</td>
                                         <td style="text-align: center;">Sistem Informasi</td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: center;">2</td>
                                         <td>Albert Cook</td>
-                                        <td style="text-align: center;">Web Service Praktik</td>
+                                        <td>Web Service Praktik</td>
                                         <td style="text-align: center;">3.51</td>
-                                        <td style="text-align: center;">6</td>
+                                        <td style="text-align: center;">2020</td>
                                         <td style="text-align: center;">A</td>
                                         <td style="text-align: center;">Sistem Informasi</td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: center;">3</td>
                                         <td>Albert Cook</td>
-                                        <td style="text-align: center;">Web Service Praktik</td>
+                                        <td>Web Service Praktik</td>
                                         <td style="text-align: center;">3.51</td>
-                                        <td style="text-align: center;">6</td>
+                                        <td style="text-align: center;">2020</td>
                                         <td style="text-align: center;">A</td>
                                         <td style="text-align: center;">Sistem Informasi</td>
                                     </tr>
                                     <tr>
                                         <td style="text-align: center;">4</td>
                                         <td>Albert Cook</td>
-                                        <td style="text-align: center;">Web Service Praktik</td>
+                                        <td>Web Service Praktik</td>
                                         <td style="text-align: center;">3.51</td>
-                                        <td style="text-align: center;">6</td>
+                                        <td style="text-align: center;">2020</td>
                                         <td style="text-align: center;">A</td>
                                         <td style="text-align: center;">Sistem Informasi</td>
                                     </tr>
