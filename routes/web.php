@@ -59,5 +59,7 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
 
     Route::get('/admin/kriteria', [AdminController::class, 'kriteria'])->name('admin/kriteria');
 
+    Route::get('/admin/faktor', [AdminController::class, 'faktor'])->name('admin/faktor');
+
     // Route::get('/admin/profile', [AdminController::class, 'profilepage'])->name('admin/profile');
 });

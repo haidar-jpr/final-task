@@ -226,51 +226,6 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td style="text-align: center;">2</td>
-                                        <td>Albert Cook</td>
-                                        <td style="text-align: center;">Web Service Praktik</td>
-                                        <td style="text-align: center;">3.51</td>
-                                        <td style="text-align: center;">6</td>
-                                        <td style="text-align: center;">A</td>
-                                        <td style="text-align: center;">Sistem Informasi</td>
-                                        <td><span class="badge bg-label-warning">Pending</span></td>
-                                        <td style="text-align: center;">
-                                            <div class="column mb-3">
-                                                <button type="button" class="btn btn-warning">Update</button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: center;">3</td>
-                                        <td>Albert Cook</td>
-                                        <td style="text-align: center;">Web Service Praktik</td>
-                                        <td style="text-align: center;">3.51</td>
-                                        <td style="text-align: center;">6</td>
-                                        <td style="text-align: center;">A</td>
-                                        <td style="text-align: center;">Sistem Informasi</td>
-                                        <td><span class="badge bg-label-warning">Pending</span></td>
-                                        <td style="text-align: center;">
-                                            <div class="column mb-3">
-                                                <button type="button" class="btn btn-warning">Update</button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: center;">4</td>
-                                        <td>Albert Cook</td>
-                                        <td style="text-align: center;">Web Service Praktik</td>
-                                        <td style="text-align: center;">3.51</td>
-                                        <td style="text-align: center;">6</td>
-                                        <td style="text-align: center;">A</td>
-                                        <td style="text-align: center;">Sistem Informasi</td>
-                                        <td><span class="badge bg-label-warning">Pending</span></td>
-                                        <td style="text-align: center;">
-                                            <div class="column mb-3">
-                                                <button type="button" class="btn btn-warning">Update</button>
-                                            </div>
-                                        </td>
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>

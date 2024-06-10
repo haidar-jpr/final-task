@@ -31,4 +31,8 @@ class AdminController extends Controller {
     public function kriteria(){
         return view('admin.kriteria');
     }
+
+    public function faktor(){
+        return view('admin.faktor');
+    }
 }
