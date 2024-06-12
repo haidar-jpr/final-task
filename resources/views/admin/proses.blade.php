@@ -80,55 +80,55 @@
 
                     <div class="container-xxl flex-grow-1 container-p-y">
 
-                        <h3 class="mb-4">Hasil Perhitungan Berdasarkan Matakuliah</h3>
+                        <h3 class="mb-4"><a class="text-secondary" href="{{ url('admin/data_pendaftar') }}">Data Pendaftar</a> / Hasil Perhitungan Berdasarkan Matakuliah</h3>
 
                         {{-- ! Card Masing-masing Matakuliah --}}
                         <div class="row">
                             <div class="col">
-                                <a href="{{ url('admin/detail_perhitungan') }}" class="card-link">
-                                    <div class="card">
+                                <a class="text-secondary" href="{{ url('admin/detail_perhitungan') }}" class="card-link">
+                                    <div class="card mb-3">
                                         <div class="card-body">
                                             Algoritma & Struktur Data Praktik
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#" class="card-link">
-                                    <div class="card">
+                                <a class="text-secondary" href="#" class="card-link">
+                                    <div class="card mb-3">
                                         <div class="card-body">
                                             Algoritma & Struktur Data Praktik
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#" class="card-link">
-                                    <div class="card">
+                                <a class="text-secondary" href="#" class="card-link">
+                                    <div class="card mb-3">
                                         <div class="card-body">
                                             Algoritma & Struktur Data Praktik
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#" class="card-link">
-                                    <div class="card">
+                                <a class="text-secondary" href="#" class="card-link">
+                                    <div class="card mb-3">
                                         <div class="card-body">
                                             Algoritma & Struktur Data Praktik
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#" class="card-link">
-                                    <div class="card">
+                                <a class="text-secondary" href="#" class="card-link">
+                                    <div class="card mb-3">
                                         <div class="card-body">
                                             Algoritma & Struktur Data Praktik
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#" class="card-link">
-                                    <div class="card">
+                                <a class="text-secondary" href="#" class="card-link">
+                                    <div class="card mb-3">
                                         <div class="card-body">
                                             Algoritma & Struktur Data Praktik
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#" class="card-link">
-                                    <div class="card">
+                                <a class="text-secondary" href="#" class="card-link">
+                                    <div class="card mb-3">
                                         <div class="card-body">
                                             Algoritma & Struktur Data Praktik
                                         </div>
@@ -136,50 +136,50 @@
                                 </a>
                             </div>
                             <div class="col">
-                                <a href="#" class="card-link">
-                                    <div class="card">
+                                <a class="text-secondary" href="#" class="card-link">
+                                    <div class="card mb-3">
                                         <div class="card-body">
                                             Algoritma & Struktur Data Praktik
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#" class="card-link">
-                                    <div class="card">
+                                <a class="text-secondary" href="#" class="card-link">
+                                    <div class="card mb-3">
                                         <div class="card-body">
                                             Algoritma & Struktur Data Praktik
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#" class="card-link">
-                                    <div class="card">
+                                <a class="text-secondary" href="#" class="card-link">
+                                    <div class="card mb-3">
                                         <div class="card-body">
                                             Algoritma & Struktur Data Praktik
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#" class="card-link">
-                                    <div class="card">
+                                <a class="text-secondary" href="#" class="card-link">
+                                    <div class="card mb-3">
                                         <div class="card-body">
                                             Algoritma & Struktur Data Praktik
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#" class="card-link">
-                                    <div class="card">
+                                <a class="text-secondary" href="#" class="card-link">
+                                    <div class="card mb-3">
                                         <div class="card-body">
                                             Algoritma & Struktur Data Praktik
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#" class="card-link">
-                                    <div class="card">
+                                <a class="text-secondary" href="#" class="card-link">
+                                    <div class="card mb-3">
                                         <div class="card-body">
                                             Algoritma & Struktur Data Praktik
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#" class="card-link">
-                                    <div class="card">
+                                <a class="text-secondary" href="#" class="card-link">
+                                    <div class="card mb-3">
                                         <div class="card-body">
                                             Algoritma & Struktur Data Praktik
                                         </div>

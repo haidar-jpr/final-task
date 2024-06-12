@@ -80,7 +80,7 @@
 
                     <div class="container-xxl flex-grow-1 container-p-y">
 
-                        <h3>Ranking</h3>
+                        <h3><a class="text-secondary" href="{{ url('admin/detail_perhitungan') }}">Detail Perhitungan</a> / Ranking</h3>
 
                         {{-- ! Tabel Keputusan --}}
                         <div class="table-responsive mt-4">

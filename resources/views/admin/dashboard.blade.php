@@ -43,6 +43,7 @@
             border-top: var(--bs-border-width) solid;
             opacity: 1;
         }
+
         .empty-message {
             display: flex;
             justify-content: center;
@@ -78,120 +79,328 @@
                 <div class="content-wrapper">
                     <div class="container-xxl flex-grow-1 container-p-y">
 
-                        {{-- ! Cara penggunaan aplikasi --}}
-                        <div class="col-md">
-                            <div class="card shadow-none bg-transparent border border-primary">
-                                <div class="card-header fs-xlarge fw-semibold">Cara Penggunaan Aplikasi</div>
-                                <div class="card-body text-primary">
-                                    <h5 class="card-title ">Tutorial</h5>
-                                    <p class="card-text"> 1. Masuk ke menu "Data Pendaftar" </p>
-                                    <p class="card-text"> 2. Lakukan pemrosesan </p>
-                                    <p class="card-text"> 3. Terdapat beberapa kriteria yang digunakan untuk menentukan
-                                        asisten
-                                        pratikum. </p>
+                        {{-- ! Test Dashboard --}}
+                        <div class="row">
+                            <div class="col-lg-8 mb-4 order-0">
+                                <div class="card">
+                                    <div class="d-flex align-items-end row">
+                                        <div class="col-sm-7">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-primary">Selamat Datang Kembali! 🎉</h5>
+                                                <p class="mb-4">
+                                                    Sistem Pendukung Keputusan rekomendasi asisten matakuliah pratikum
+                                                    menggunakan metode <span class="fw-bold">Profile Matching</span>
+                                                </p>
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                    data-bs-target="#exampleModal">Cara Penggunaan Aplikasi</button>
+
+                                                {{-- ! Modal --}}
+                                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Cara
+                                                                    Penggunaan Aplikasi</h5>
+                                                                <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal" aria-label="Close">
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                {{-- ! Cara penggunaan aplikasi --}}
+                                                                <div class="col-md">
+                                                                    <div
+                                                                        class="card shadow-none bg-transparent border border-primary">
+                                                                        <div class="card-body text-primary">
+                                                                            <p class="card-text"> 1. Masuk ke menu "Data
+                                                                                Pendaftar" </p>
+                                                                            <p class="card-text"> 2. Lakukan pemrosesan
+                                                                            </p>
+                                                                            <p class="card-text"> 3. Terdapat beberapa
+                                                                                kriteria yang digunakan untuk menentukan
+                                                                                asisten pratikum. </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5 text-center text-sm-left">
+                                            <div class="card-body pb-0 px-0 px-md-4">
+                                                <img src="../admin/assets/img/illustrations/man-with-laptop-light.png"
+                                                    height="140" alt="View Badge User"
+                                                    data-app-dark-img="illustrations/man-with-laptop-dark.png"
+                                                    data-app-light-img="illustrations/man-with-laptop-light.png" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- ! Double card --}}
+                            <div class="col-lg-4 col-md-4 order-1">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-12 col-6 mb-4 order-0">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div
+                                                    class="card-title d-flex align-items-start justify-content-between">
+                                                    <div class="avatar flex-shrink-0">
+                                                        <img src="../admin/assets/img/icons/unicons/chart-success.png"
+                                                            alt="chart success" class="rounded" />
+                                                    </div>
+                                                </div>
+                                                <h5 class="fw-semibold mb-2 text-warning"
+                                                    style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
+                                                    Algoritma & Struktur Data Praktik</h5>
+                                                <h4>10 Pendaftar</h4>
+                                                <small class="card-title mb-2">3 Diterima</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-6 mb-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div
+                                                    class="card-title d-flex align-items-start justify-content-between">
+                                                    <div class="avatar flex-shrink-0">
+                                                        <img src="../admin/assets/img/icons/unicons/chart-success.png"
+                                                            alt="chart success" class="rounded" />
+                                                    </div>
+                                                </div>
+                                                <span class="fw-semibold mb-1 text-primary" style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">Aplikasi Automasi Perkantoran</span>
+                                                <h4>8 Pendaftar</h4>
+                                                <small class="card-title mb-2">3 Diterima</small>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="row mb-3 mt-3">
-
-                            {{-- ! Card Kriteria --}}
-                            <div class="col-md">
-                                <a href="#" class="card-link">
-                                    <div class="card text-white bg-primary">
-                                        <div class="card-header fs-xlarge fw-semibold">7 KRITERIA</div>
-                                        <div class="card-body">
-                                            <h5 class="card-title text-white">Kriteria</h5>
-                                            <p class="card-text">
-                                                Terdapat beberapa kriteria yang digunakan untuk menentukan asisten
-                                                pratikum.
-                                            </p>
+                        {{-- ! Data kriteria --}}
+                        <div class="row">
+                            <div class="col-lg-8 mb-4 order-0">
+                                <div class="card">
+                                    <div class="d-flex align-items-end row">
+                                        <div class="col">
+                                            <div class="card-body">
+                                                <div
+                                                    class="card-title d-flex align-items-start justify-content-between">
+                                                    <div class="avatar flex-shrink-0">
+                                                        <img src="../admin/assets/img/icons/unicons/chart-success.png"
+                                                            alt="chart success" class="rounded" />
+                                                    </div>
+                                                    <div class="dropdown">
+                                                        <button class="btn p-0" type="button" id="cardOpt3"
+                                                            data-bs-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </button>
+                                                        <div class="dropdown-menu dropdown-menu-end"
+                                                            aria-labelledby="cardOpt3">
+                                                            <a class="dropdown-item"
+                                                                href="{{ url('admin/data_pendaftar') }}">Selengkapnya</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <span class="fw-semibold d-block mb-2">Data Kriteria</span>
+                                                <p class="card-title mb-3"
+                                                    style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
+                                                    Kriteria adalah parameter yang digunakan sebagai profil ideal yang
+                                                    harus dimiliki calon asisten matakuliah pratikum.</p>
+                                                <small class="text-primary fw-semibold"><span class="fw-bold">Jumlah
+                                                        Data : </span>7 Data</small>
+                                            </div>
                                         </div>
                                     </div>
-                                </a>
+                                </div>
                             </div>
-
-                            {{-- ! Card Alternatif --}}
-                            <div class="col-md">
-                                <a href="#" class="card-link">
-                                    <div class="card text-white bg-success">
-                                        <div class="card-header fs-xlarge fw-semibold">32 ALTERNATIF</div>
-                                        <div class="card-body">
-                                            <h5 class="card-title text-white">Alternatif</h5>
-                                            <p class="card-text">
-                                                Alternatif merupakan mahasiswa yang mendaftar menjadi asisten pratikum
-                                                secara keseluruhan.
-                                            </p>
+                            {{-- ! Double card --}}
+                            <div class="col-lg-4 col-md-4 order-1">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-12 col-6 mb-4 order-0">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div
+                                                    class="card-title d-flex align-items-start justify-content-between">
+                                                    <div class="avatar flex-shrink-0">
+                                                        <img src="../admin/assets/img/icons/unicons/chart-success.png"
+                                                            alt="chart success" class="rounded" />
+                                                    </div>
+                                                </div>
+                                                <h5 class="fw-semibold mb-2 text-warning"
+                                                    style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
+                                                    Sistem Basis Data Praktik</h5>
+                                                <h4>10 Pendaftar</h4>
+                                                <small class="card-title mb-2">3 Diterima</small>
+                                            </div>
                                         </div>
                                     </div>
-                                </a>
+                                    <div class="col-lg-6 col-md-12 col-6 mb-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div
+                                                    class="card-title d-flex align-items-start justify-content-between">
+                                                    <div class="avatar flex-shrink-0">
+                                                        <img src="../admin/assets/img/icons/unicons/chart-success.png"
+                                                            alt="chart success" class="rounded" />
+                                                    </div>
+                                                </div>
+                                                <span class="fw-semibold mb-1 text-primary" style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">Sistem Operasi Praktik</span>
+                                                <h4>6 Pendaftar</h4>
+                                                <small class="card-title mb-2">2 Diterima</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
                         </div>
 
-                        {{-- ! Card informasi --}}
-                        <div class="col-md mb-3 mt-5">
-                            <div class="card text-white bg-info">
-                                <div class="card-header fs-large fw-semibold">INFORMASI</div>
-                                <div class="card-body">
-                                    <h5 class="card-title text-white">Hasil peringkat yang di peroleh</h5>
+                        {{-- ! Data pendaftar --}}
+                        <div class="row">
+                            <div class="col-lg-8 mb-4 order-0">
+                                <div class="card">
+                                    <div class="d-flex align-items-end row">
+                                        <div class="col">
+                                            <div class="card-body">
+                                                <div
+                                                    class="card-title d-flex align-items-start justify-content-between">
+                                                    <div class="avatar flex-shrink-0">
+                                                        <img src="../admin/assets/img/icons/unicons/chart.png"
+                                                            alt="chart success" class="rounded" />
+                                                    </div>
+                                                    <div class="dropdown">
+                                                        <button class="btn p-0" type="button" id="cardOpt3"
+                                                            data-bs-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </button>
+                                                        <div class="dropdown-menu dropdown-menu-end"
+                                                            aria-labelledby="cardOpt3">
+                                                            <a class="dropdown-item"
+                                                                href="{{ url('admin/kriteria') }}">Selengkapnya</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <span class="fw-semibold d-block mb-2">Data Pendaftar</span>
+                                                <p class="card-title mb-3"
+                                                    style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
+                                                    Data mahasiswa yang melakukan pendaftaran asisten
+                                                    matakuliah pratikum melalui form pendaftaran.
+                                                </p>
+                                                <small class="text-primary fw-semibold"><span class="fw-bold">Jumlah
+                                                        Data : </span>32 Data</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{-- ! Double card --}}
+                            <div class="col-lg-4 col-md-4 order-1">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-12 col-6 mb-4 order-0">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div
+                                                    class="card-title d-flex align-items-start justify-content-between">
+                                                    <div class="avatar flex-shrink-0">
+                                                        <img src="../admin/assets/img/icons/unicons/chart-success.png"
+                                                            alt="chart success" class="rounded" />
+                                                    </div>
+                                                </div>
+                                                <h5 class="fw-semibold mb-2 text-warning"
+                                                    style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
+                                                    Jaringan Komputer Praktik</h5>
+                                                <h4>10 Pendaftar</h4>
+                                                <small class="card-title mb-2">3 Diterima</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-6 mb-4">
+                                        
+                                        <div class="card">
+                                            <a href="{{ url('admin/kriteria') }}" class="menu-link" style="display: flex; justify-content: center">
+                                            <div class="card-body">
+                                                <div class="card-body pb-0 px-0 px-md-0">
+                                                        <i class="menu-icon tf-icons bx bx-plus bx-lg text-secondary" style="display: flex; justify-content: center"></i>
+                                                    <br>
+                                                    <div class="mb-4 text-secondary" style="display: flex; justify-content: center">Selengkapnya</div>
+                                                </div>
+                                            
+                                            </div>
+                                        </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         {{-- ! Tabel hasil ranking --}}
-                        <div class="table-responsive">
-                            <table class="table table-bordered" style="width:100%">
-                                <thead>
-                                    <tr>
-                                        <th style="text-align: center; width:10%">Ranking</th>
-                                        <th>Nama</th>
-                                        <th style="text-align: center;">Nilai Akhir</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td style="text-align: center;">1</td>
-                                        <td>Albert Cook</td>
-                                        <td style="text-align: center;">4.12</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: center;">2</td>
-                                        <td>Barry Hunter</td>
-                                        <td style="text-align: center;">4.11</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: center;">3</td>
-                                        <td>Trevor Baker</td>
-                                        <td style="text-align: center;">4.09</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: center;">4</td>
-                                        <td>Jerry Milton</td>
-                                        <td style="text-align: center;">4.08</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="row">
+                            <div class="col mb-4">
+                                <div class="card">
+                                    <h5 class="card-header fw-bold">Mahasiswa Diterima</h5>
+                                    <div class="table-responsive mb-4">
+                                        <table class="table table-bordered mx-4 cell-fit" style="width: 96%">
+                                            <thead>
+                                                <tr class="table-info">
+                                                    <th>Nama</th>
+                                                    <th>Asal Prodi</th>
+                                                    <th>Matakuliah</th>
+                                                    <th style="text-align: center;">Nilai Akhir</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Albert Cook</td>
+                                                    <td>Sistem Informasi</td>
+                                                    <td>Web Service Praktik</td>
+                                                    <td style="text-align: center;">4.12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Barry Hunter</td>
+                                                    <td>Sistem Informasi</td>
+                                                    <td>Web Service Praktik</td>
+                                                    <td style="text-align: center;">4.11</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trevor Baker</td>
+                                                    <td>Sistem Informasi</td>
+                                                    <td>Web Service Praktik</td>
+                                                    <td style="text-align: center;">4.09</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jerry Milton</td>
+                                                    <td>Sistem Informasi</td>
+                                                    <td>Web Service Praktik</td>
+                                                    <td style="text-align: center;">4.08</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
                         {{-- ! Belum dilakukan perankingan --}}
                         {{-- <div class="empty-message">
-                            <div>
-                                <h4>Belum dilakukan perankingan</h4>
-                                <p>Silahkan lakukan pemrosesan data terlebih dahulu</p>
-                            </div>
-                        </div> --}}
-
+                                <div>
+                                    <h4>Belum dilakukan perankingan</h4>
+                                    <p>Silahkan lakukan pemrosesan data terlebih dahulu</p>
+                                </div>
+                            </div> --}}
                     </div>
-
-                    {{-- ! Footer --}}
-                    @include('components.footer')
-
                 </div>
+
+                {{-- ! Footer --}}
+                @include('components.footer')
             </div>
         </div>
-        <div class="layout-overlay layout-menu-toggle"></div>
     </div>
+
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->

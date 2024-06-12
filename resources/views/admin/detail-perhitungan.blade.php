@@ -80,7 +80,7 @@
 
                     <div class="container-xxl flex-grow-1 container-p-y">
 
-                        <h3>Detail Perhitungan</h3>
+                        <h3><a class="text-secondary" href="{{ url('admin/proses') }}">Hasil Perhitungan Berdasarkan Matakuliah</a> / Detail Perhitungan</h3>
 
                         {{-- ! Keputusan dari rekomendasi --}}
                         <a class="btn btn-dark ms-2" type="button" href="{{ url('admin/keputusan') }}">Keputusan</a>
