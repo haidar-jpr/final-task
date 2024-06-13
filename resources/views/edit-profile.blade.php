@@ -83,11 +83,6 @@
                                                     <input type="file" id="upload" class="account-file-input"
                                                         hidden accept="image/png, image/jpeg" />
                                                 </label>
-                                                <button type="button"
-                                                    class="btn btn-outline-secondary account-image-reset mb-4">
-                                                    <i class="bx bx-reset d-block d-sm-none"></i>
-                                                    <span class="d-none d-sm-block">Reset</span>
-                                                </button>
 
                                                 <p class="text-muted mb-0">Allowed JPG, GIF or PNG. Max size of 800K</p>
                                             </div>
@@ -95,36 +90,37 @@
                                     </div>
                                     <hr class="my-0" />
                                     <div class="card-body">
-                                        <form id="formAccountSettings" method="POST" onsubmit="return false">
+                                        <form action="{{ route('edit_profile.update_profile', $user->id) }}" id="formAccountSettings" method="POST">
+                                            @csrf
+                                            @method('PUT')
                                             <div class="row">
                                                 <div class="mb-3 col-md-6">
                                                     <label for="nim" class="form-label">NIM</label>
                                                     <input class="form-control" type="number" id="nim"
-                                                        name="nim" value="5200311017" autofocus />
+                                                        name="nim" value="{{ $user->id }}" disabled/>
                                                 </div>
                                                 <div class="mb-3 col-md-6">
                                                     <label for="nama" class="form-label">Nama</label>
                                                     <input class="form-control" type="text" name="nama"
-                                                        id="nama" value="Subhan Ikraam Haidar" />
+                                                        id="nama" value="{{ $user->name }}" required/>
                                                 </div>
                                                 <div class="mb-3 col-md-6">
                                                     <label for="email" class="form-label">Email</label>
                                                     <input class="form-control" type="email" name="email"
-                                                        id="email" value="contoh@gmail.com" />
+                                                        id="email" value="{{ $user->email }}" required/>
                                                 </div>
                                                 <div class="mb-3 col-md-6">
                                                     <label for="phone" class="form-label">Phone</label>
                                                     <input class="form-control" type="number" name="phone"
-                                                        id="phone" value="08xxxxxxxxxxx" />
+                                                        id="phone" value="{{ $user->phone }}" required/>
                                                 </div>
                                                 <div class="mb-3 col-md-6">
                                                     <label for="pass" class="form-label">Password</label>
-                                                    <input class="form-control" type="pass" name="pass"
-                                                        id="pass" />
+                                                    <input class="form-control" type="password" name="pass" id="pass" required/>
                                                 </div>
                                             </div>
                                             <div class="mt-2">
-                                                <button class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Simpan</button>
+                                                <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Simpan</button>
 
                                                 <!-- Modal -->
                                                 <div class="modal fade" id="exampleModal" tabindex="-1"
@@ -143,7 +139,7 @@
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-secondary"
                                                                     data-bs-dismiss="modal">Kembali</button>
-                                                                <button type="submit" class="btn btn-primary">Simpan</button>
+                                                                <button type="submit" class="btn btn-primary">Update</button>
                                                             </div>
                                                         </div>
                                                     </div>

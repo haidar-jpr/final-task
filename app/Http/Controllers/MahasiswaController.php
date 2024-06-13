@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
-class HomeController extends Controller
+class MahasiswaController extends Controller
 {
     public function __construct()
     {
@@ -13,7 +15,8 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('dashboard');
+        $user = Auth::user();
+        return view('dashboard', compact('user'));
     }
 
     public function pendaftaran()
@@ -23,7 +26,29 @@ class HomeController extends Controller
 
     public function edit_profile()
     {
-        return view('edit-profile');
+        $user = Auth::user();
+        return view('edit-profile', compact('user'));
+    }
+
+    public function update_profile(Request $request, $id)
+    {
+        $user = User::findOrFail($id);
+
+        $request->validate([
+            'nama' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255',
+            'phone' => 'nullable|string|max:255',
+            'password' => 'nullable|string|min:8|confirmed',
+        ]);
+
+        // Memperbarui data pengguna
+        $user->name = $request->input('nama');
+        $user->email = $request->input('email');
+        $user->phone = $request->input('phone');
+        $user->password = $request->input('pass');
+        $user->update();
+
+        return redirect()->route('edit_profile')->with('success');
     }
 
     // ! Mengarahkan ke view form pendaftaran asisten praktikum

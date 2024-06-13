@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MahasiswaController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -21,25 +21,26 @@ Route::controller(AuthController::class)->group(function () {
 
 //Normal Users Routes List
 Route::middleware(['auth', 'user-access:user'])->group(function () {
-    Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', [MahasiswaController::class, 'index'])->name('dashboard');
 
-    Route::get('/pendaftaran', [HomeController::class, 'pendaftaran'])->name('pendaftaran');
+    Route::get('/pendaftaran', [MahasiswaController::class, 'pendaftaran'])->name('pendaftaran');
 
-    Route::get('/edit_profile', [HomeController::class, 'edit_profile'])->name('edit_profile');
+    Route::get('/edit_profile', [MahasiswaController::class, 'edit_profile'])->name('edit_profile');
+    Route::put('/edit_profile/{id}', [MahasiswaController::class, 'update_profile'])->name('edit_profile.update_profile');
 
-    route::get('/form_pendaftaran_wsp', [HomeController::class, 'form_pendaftaran_wsp']);
-    route::get('/form_pendaftaran_dwp', [HomeController::class, 'form_pendaftaran_dwp']);
-    route::get('/form_pendaftaran_asdp', [HomeController::class, 'form_pendaftaran_asdp']);
-    route::get('/form_pendaftaran_sop', [HomeController::class, 'form_pendaftaran_sop']);
-    route::get('/form_pendaftaran_aap', [HomeController::class, 'form_pendaftaran_aap']);
-    route::get('/form_pendaftaran_sbdp', [HomeController::class, 'form_pendaftaran_sbdp']);
-    route::get('/form_pendaftaran_jkp', [HomeController::class, 'form_pendaftaran_jkp']);
-    route::get('/form_pendaftaran_pbop', [HomeController::class, 'form_pendaftaran_pbop']);
-    route::get('/form_pendaftaran_pwp', [HomeController::class, 'form_pendaftaran_pwp']);
-    route::get('/form_pendaftaran_bdda', [HomeController::class, 'form_pendaftaran_bdda']);
-    route::get('/form_pendaftaran_pwlp', [HomeController::class, 'form_pendaftaran_pwlp']);
-    route::get('/form_pendaftaran_apbp', [HomeController::class, 'form_pendaftaran_apbp']);
-    route::get('/form_pendaftaran_cml', [HomeController::class, 'form_pendaftaran_cml']);
+    route::get('/form_pendaftaran_wsp', [MahasiswaController::class, 'form_pendaftaran_wsp']);
+    route::get('/form_pendaftaran_dwp', [MahasiswaController::class, 'form_pendaftaran_dwp']);
+    route::get('/form_pendaftaran_asdp', [MahasiswaController::class, 'form_pendaftaran_asdp']);
+    route::get('/form_pendaftaran_sop', [MahasiswaController::class, 'form_pendaftaran_sop']);
+    route::get('/form_pendaftaran_aap', [MahasiswaController::class, 'form_pendaftaran_aap']);
+    route::get('/form_pendaftaran_sbdp', [MahasiswaController::class, 'form_pendaftaran_sbdp']);
+    route::get('/form_pendaftaran_jkp', [MahasiswaController::class, 'form_pendaftaran_jkp']);
+    route::get('/form_pendaftaran_pbop', [MahasiswaController::class, 'form_pendaftaran_pbop']);
+    route::get('/form_pendaftaran_pwp', [MahasiswaController::class, 'form_pendaftaran_pwp']);
+    route::get('/form_pendaftaran_bdda', [MahasiswaController::class, 'form_pendaftaran_bdda']);
+    route::get('/form_pendaftaran_pwlp', [MahasiswaController::class, 'form_pendaftaran_pwlp']);
+    route::get('/form_pendaftaran_apbp', [MahasiswaController::class, 'form_pendaftaran_apbp']);
+    route::get('/form_pendaftaran_cml', [MahasiswaController::class, 'form_pendaftaran_cml']);
     // Route::get('/profile', [UserController::class, 'userprofile'])->name('profile');
 });
 

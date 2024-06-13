@@ -159,12 +159,12 @@
                 </div>
 @endif
                 <div class="mt-2 mb-3">
-                  <label for="nimnik" class="form-label" aria-valuetext="{{ __('NIM / NIK') }}">NIM / NIK</label>
+                  <label for="id" class="form-label" aria-valuetext="{{ __('NIM / NIK') }}">NIM / NIK</label>
                   <input
                     type="number"
                     class="form-control"
-                    id="nimnik"
-                    name="nimnik"
+                    id="id"
+                    name="id"
                     placeholder="NIM / NIK"
                     autofocus
                   />

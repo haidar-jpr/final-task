@@ -24,14 +24,14 @@ class AuthController extends Controller
     public function registerSave(Request $request)
     {
         Validator::make($request->all(), [
-            'nimnik' => 'required',
+            'id' => 'required',
             'name' => 'required',
             'email' => 'required',
             'password' => 'required|confirmed',
         ])->validate();
 
         User::create([
-            'nimnik' => $request->nimnik,
+            'id' => $request->id,
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
@@ -50,13 +50,13 @@ class AuthController extends Controller
     public function loginAction(Request $request)
     {
         Validator::make($request->all(), [
-            'nimnik' => 'required',
+            'id' => 'required',
             'password' => 'required',
         ])->validate();
 
-        if (!Auth::attempt($request->only('nimnik', 'password'), $request->boolean('remember-me'))) {
+        if (!Auth::attempt($request->only('id', 'password'), $request->boolean('remember-me'))) {
             throw ValidationException::withMessages([
-                'nimnik' => trans('auth.failed')
+                'id' => trans('auth.failed')
             ]);
         }
 

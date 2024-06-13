@@ -103,7 +103,8 @@
                                         <div class="card-body">
                                             <h5 class="card-title">Pengumunan Hasil Seleksi</h5>
                                             <p class="card-text">
-                                                Sedang dilakukan proses <b style="color: #374add">Seleksi</b>, harap bersabar ya 😉
+                                                Sedang dilakukan proses <b style="color: #374add">Seleksi</b>, harap
+                                                bersabar ya 😉
                                             </p>
                                         </div>
                                     </div>
@@ -178,26 +179,22 @@
                                         <h5 class="card-title">Data Diri</h5>
                                         <img class="img-fluid d-flex mx-auto my-4" src="admin/assets/img/elements/4.jpg"
                                             alt="Card image cap" />
-                                        <h5>Subhan Ikraam Haidar</h5>
+                                        <h5>{{ $user->name }}</h5>
 
                                         <hr class="solid">
 
-                                        <p class="card-text">Nama <br> <small>Subhan Ikraam Haidar</small></p>
+                                        <p class="card-text">Nama <br> <small>{{ $user->name }}</small></p>
                                         <hr class="solid">
-                                        <p class="card-text">NIM <br> <small>5200311017</small></p>
+                                        <p class="card-text">NIM <br> <small>{{ $user->id }}</small></p>
                                         <hr class="solid">
-                                        <p class="card-text">Email <br> <small>haidar.dod@gmail.com</small></p>
+                                        <p class="card-text">Email <br> <small>{{ $user->email }}</small></p>
                                         <hr class="solid">
-                                        <p class="card-text">No Handphone <br> <small>085482194204</small></p>
+                                        <p class="card-text">No Handphone <br> <small>{{ $user->phone }}</small></p>
 
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-
-
-
                     </div>
 
                     <!-- / Content -->
