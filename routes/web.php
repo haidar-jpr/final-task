@@ -30,7 +30,10 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
 
     route::get('/form_pendaftaran_wsp', [MahasiswaController::class, 'form_pendaftaran_wsp']);
     route::get('/form_pendaftaran_dwp', [MahasiswaController::class, 'form_pendaftaran_dwp']);
+
     route::get('/form_pendaftaran_asdp', [MahasiswaController::class, 'form_pendaftaran_asdp']);
+    // route::post('/form_pendaftaran_asdp/{id}', [MahasiswaController::class, 'form_pendaftaran_asdp']);
+
     route::get('/form_pendaftaran_sop', [MahasiswaController::class, 'form_pendaftaran_sop']);
     route::get('/form_pendaftaran_aap', [MahasiswaController::class, 'form_pendaftaran_aap']);
     route::get('/form_pendaftaran_sbdp', [MahasiswaController::class, 'form_pendaftaran_sbdp']);

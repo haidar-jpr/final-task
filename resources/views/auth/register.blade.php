@@ -142,7 +142,7 @@
                 @csrf
 
                 <div class="mb-3">
-                  <label for="id" class="form-label" aria-valuetext="{{ __('NIM / NIK') }}">Nim / NIK</label>
+                  <label for="id" class="form-label" aria-valuetext="{{ __('NIM / NIK') }}">NIM / NIK</label>
                   <input
                     type="number"
                     class="form-control"
@@ -151,19 +151,19 @@
                     placeholder="NIM / NIK"
                     autofocus
                   />
-                  @error('nimnik')
+                  @error('id')
                       <span>{{ $message }}</span>
                   @enderror
                 </div>
 
                 <div class="mb-3">
-                  <label for="name" class="form-label" aria-valuetext="{{ __('Name') }}">Name</label>
+                  <label for="username" class="form-label" aria-valuetext="{{ __('Username') }}">Username</label>
                   <input
                     type="text"
                     class="form-control"
-                    id="name"
-                    name="name"
-                    placeholder="Enter your name"
+                    id="username"
+                    name="username"
+                    placeholder="Enter your username"
                     autofocus
                   />
                 </div>

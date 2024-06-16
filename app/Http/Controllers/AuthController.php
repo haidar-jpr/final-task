@@ -23,16 +23,18 @@ class AuthController extends Controller
 
     public function registerSave(Request $request)
     {
+        
         Validator::make($request->all(), [
-            'id' => 'required',
-            'name' => 'required',
+            'username' => 'required',
             'email' => 'required',
+            'phone' => 'required',
             'password' => 'required|confirmed',
+            'id' => 'required',
         ])->validate();
 
         User::create([
-            'id' => $request->id,
-            'name' => $request->name,
+            'mahasiswa_npm' => $request->id,
+            'username' => $request->username,
             'email' => $request->email,
             'phone' => $request->phone,
             'type' => "0",
@@ -49,14 +51,15 @@ class AuthController extends Controller
 
     public function loginAction(Request $request)
     {
+
         Validator::make($request->all(), [
-            'id' => 'required',
+            'mahasiswa_npm' => 'required',
             'password' => 'required',
         ])->validate();
 
-        if (!Auth::attempt($request->only('id', 'password'), $request->boolean('remember-me'))) {
+        if (!Auth::attempt($request->only('mahasiswa_npm', 'password'), $request->boolean('remember-me'))) {
             throw ValidationException::withMessages([
-                'id' => trans('auth.failed')
+                'mahasiswa_npm' => trans('auth.failed')
             ]);
         }
 

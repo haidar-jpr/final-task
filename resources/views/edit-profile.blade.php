@@ -97,12 +97,12 @@
                                                 <div class="mb-3 col-md-6">
                                                     <label for="nim" class="form-label">NIM</label>
                                                     <input class="form-control" type="number" id="nim"
-                                                        name="nim" value="{{ $user->id }}" disabled/>
+                                                        name="nim" value="{{ $user->mahasiswa_npm }}" disabled/>
                                                 </div>
                                                 <div class="mb-3 col-md-6">
-                                                    <label for="nama" class="form-label">Nama</label>
-                                                    <input class="form-control" type="text" name="nama"
-                                                        id="nama" value="{{ $user->name }}" required/>
+                                                    <label for="username" class="form-label">Username</label>
+                                                    <input class="form-control" type="text" name="username"
+                                                        id="username" value="{{ $user->username }}" required/>
                                                 </div>
                                                 <div class="mb-3 col-md-6">
                                                     <label for="email" class="form-label">Email</label>

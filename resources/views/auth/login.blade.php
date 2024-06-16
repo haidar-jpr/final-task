@@ -154,7 +154,7 @@
                     {{-- <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button> --}}
                   </div>
                   <div class="toast-body">
-                    Email atau password anda salah!
+                    NIM / NIK atau password anda salah!
                   </div>
                 </div>
 @endif
@@ -163,8 +163,8 @@
                   <input
                     type="number"
                     class="form-control"
-                    id="id"
-                    name="id"
+                    id="mahasiswa_npm"
+                    name="mahasiswa_npm"
                     placeholder="NIM / NIK"
                     autofocus
                   />

@@ -183,9 +183,9 @@
 
                                         <hr class="solid">
 
-                                        <p class="card-text">Nama <br> <small>{{ $user->name }}</small></p>
+                                        <p class="card-text">Nama <br> <small>{{ $user->mahasiswa->name }}</small></p>
                                         <hr class="solid">
-                                        <p class="card-text">NIM <br> <small>{{ $user->id }}</small></p>
+                                        <p class="card-text">NIM <br> <small>{{ $user->mahasiswa_npm }}</small></p>
                                         <hr class="solid">
                                         <p class="card-text">Email <br> <small>{{ $user->email }}</small></p>
                                         <hr class="solid">

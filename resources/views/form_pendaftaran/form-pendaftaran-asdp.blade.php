@@ -82,7 +82,8 @@
                                     href="{{ url('pendaftaran') }}">Daftar Matakuliah</a> /</span> Form Pendaftaran
                             Algoritma & Struktur Data Praktik</h4>
 
-                        <form action="">
+                        <form action="{{ route('form_pendaftaran_asdp', $user->id) }}" method="POST">
+                            @csrf
                             <div class="card mb-4">
                                 <div class="card header m-4">
                                     <h5>Data diri pendaftar</h5>
@@ -93,13 +94,13 @@
                                             <div class="mb-3">
                                                 <label for="defaultFormControlInput" class="form-label">Nama
                                                     Lengkap</label>
-                                                <input type="text" class="form-control" id="nama" name="nama"
-                                                    placeholder="John Doe" aria-describedby="defaultFormControlHelp" disabled/>
+                                                <input type="text" class="form-control" id="name" name="name"
+                                                    value="{{ $user->mahasiswa->name }}" aria-describedby="defaultFormControlHelp" disabled/>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="defaultFormControlInput" class="form-label">Email</label>
                                                 <input type="text" class="form-control" id="email" name="email"
-                                                    placeholder="contoh9@gmail.com"
+                                                    value="{{ $user->email }}"
                                                     aria-describedby="defaultFormControlHelp" disabled/>
                                             </div>
                                             <div class="mb-3">
@@ -134,7 +135,7 @@
                                         <div class="col">
                                             <div class="mb-3">
                                                 <label for="pilih2" class="form-label">Nama Matakuliah</label>
-                                                <select class="form-select" id="pilih3" name="pilih2"
+                                                <select class="form-select" id="pilih3" name="pilih3"
                                                     aria-label="Default select example" disabled>
                                                     <option selected class="text-center">-- Pilih --</option>
                                                     <option value="">Algoritma & Struktur Data Praktik</option>
@@ -148,9 +149,9 @@
                                                 </select>
                                             </div>
                                             <div class="mb-3">
-                                                <label for="formFile" class="form-label">Upload Bukti Surat
+                                                <label for="pilih3" class="form-label">Upload Bukti Surat
                                                     Asistensi</label>
-                                                <input class="form-control" type="file" id="formFile" />
+                                                <input class="form-control" type="file" id="pilih4" name="pilih4" disabled/>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="nilai" class="form-label">Nilai Matakuliah</label>
@@ -163,14 +164,8 @@
                                             </div>
                                             <div class="mb-3">
                                                 <label for="prodi" class="form-label">Asal Prodi</label>
-                                                <select class="form-select" id="prodi" name="prodi"
-                                                    aria-label="Default select example">
-                                                    <option selected class="text-center">-- Pilih --</option>
-                                                    <option value="SI">Sistem Informasi</option>
-                                                    <option value="IF">Informatika</option>
-                                                    <option value="SD">Sains Data</option>
-                                                    <option value="TK">Teknik Komputer</option>
-                                                </select>
+                                                <input type="text" class="form-control" id="prodi" name="prodi"
+                                                    value="{{ $user->mahasiswa->program_studi }}" aria-describedby="defaultFormControlHelp" disabled/>
                                             </div>
                                         </div>
                                     </div>
@@ -181,7 +176,7 @@
                                         </div>
                                     </div>
                                     <div class="row d-flex justify-content-end mb-4">
-                                        <button type="button" class="btn btn-primary col-md-2 me-2">Simpan</button>
+                                        <button type="submit" class="btn btn-primary col-md-2 me-2">Simpan</button>
                                     </div>
 
                                 </div>
@@ -213,11 +208,14 @@
         function checkSelection() {
             var firstSelect = document.getElementById('pilih2');
             var secondSelect = document.getElementById('pilih3');
+            var thirdSelect = document.getElementById('pilih4');
 
             if (firstSelect.value === 'ya') {
                 secondSelect.disabled = false;
+                thirdSelect.disabled = false;
             } else {
                 secondSelect.disabled = true;
+                thirdSelect.disabled = true;
             }
         }
     </script>
