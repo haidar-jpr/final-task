@@ -83,7 +83,234 @@
                         <h3><a class="text-secondary" href="{{ url('admin/proses') }}">Hasil Perhitungan Berdasarkan Matakuliah</a> / Detail Perhitungan</h3>
 
                         {{-- ! Keputusan dari rekomendasi --}}
-                        <a class="btn btn-dark ms-2" type="button" href="{{ url('admin/keputusan') }}">Keputusan</a>
+                        {{-- <a class="btn btn-dark ms-2" type="button" href="{{ url('admin/keputusan') }}">Keputusan</a> --}}
+
+                        {{-- ! Pemetaan Bobot --}}
+                        <div class="table-responsive mt-5">
+                            <div><h4>Bobot nilai kriteria</h4></div>
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                  <th>No.</th>
+                                  <th>Pendaftar</th>
+                                  <th>Nilai Matakuliah</th>
+                                  <th>IPK</th>
+                                  <th>Program Studi</th>
+                                  <th>Asistensi</th>
+                                  <th>Semester</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <td>1.</td>
+                                  <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <span class="fw-medium">Angular Project</span></td>
+                                  <td>Albert Cook</td>
+                                  <td>
+                                    <p>Hello</p>
+                                  </td>
+                                  <td><span class="badge bg-label-primary me-1">Active</span></td>
+                                  <td>
+                                    <p>hello</p>
+                                  </td>
+                                  <td>
+                                    <p>hello</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                    <td>2.</td>
+                                  <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <span class="fw-medium">Angular Project</span></td>
+                                  <td>Albert Cook</td>
+                                  <td>
+                                    <p>Hello</p>
+                                  </td>
+                                  <td><span class="badge bg-label-primary me-1">Active</span></td>
+                                  <td>
+                                    <p>hello</p>
+                                  </td>
+                                  <td>
+                                    <p>hello</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                    <td>3.</td>
+                                  <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <span class="fw-medium">Angular Project</span></td>
+                                  <td>Albert Cook</td>
+                                  <td>
+                                    <p>Hello</p>
+                                  </td>
+                                  <td><span class="badge bg-label-primary me-1">Active</span></td>
+                                  <td>
+                                    <p>hello</p>
+                                  </td>
+                                  <td>
+                                    <p>hello</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                    <td>4.</td>
+                                  <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <span class="fw-medium">Angular Project</span></td>
+                                  <td>Albert Cook</td>
+                                  <td>
+                                    <p>Hello</p>
+                                  </td>
+                                  <td><span class="badge bg-label-primary me-1">Active</span></td>
+                                  <td>
+                                    <p>hello</p>
+                                  </td>
+                                  <td>
+                                    <p>hello</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                    <td>5.</td>
+                                  <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <span class="fw-medium">Angular Project</span></td>
+                                  <td>Albert Cook</td>
+                                  <td>
+                                    <p>Hello</p>
+                                  </td>
+                                  <td><span class="badge bg-label-primary me-1">Active</span></td>
+                                  <td>
+                                    <p>hello</p>
+                                  </td>
+                                  <td>
+                                    <p>hello</p>
+                                  </td>
+                                </tr>
+                                <tr class="text-danger">
+                                  <td class="text-primary" colspan="2" style="text-align: center"><b>Profile Ideal</b></td>
+                                  <td>3</td>
+                                  <td>2</td>
+                                  <td>3</td>
+                                  <td>2</td>
+                                  <td>2</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          {{-- ! Pemetaan GAP --}}
+                          <div class="table-responsive mt-5">
+                            <div><h4>Pemetaan Gap</h4></div>
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                  <th>No.</th>
+                                  <th>Pendaftar</th>
+                                  <th>Nilai Matakuliah</th>
+                                  <th>IPK</th>
+                                  <th>Program Studi</th>
+                                  <th>Asistensi</th>
+                                  <th>Semester</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <td>1.</td>
+                                  <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <span class="fw-medium">Angular Project</span></td>
+                                  <td>Albert Cook</td>
+                                  <td>
+                                    <p>Hello</p>
+                                  </td>
+                                  <td><span class="badge bg-label-primary me-1">Active</span></td>
+                                  <td>
+                                    <p>hello</p>
+                                  </td>
+                                  <td>
+                                    <p>hello</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                    <td>2.</td>
+                                  <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <span class="fw-medium">Angular Project</span></td>
+                                  <td>Albert Cook</td>
+                                  <td>
+                                    <p>Hello</p>
+                                  </td>
+                                  <td><span class="badge bg-label-primary me-1">Active</span></td>
+                                  <td>
+                                    <p>hello</p>
+                                  </td>
+                                  <td>
+                                    <p>hello</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                    <td>3.</td>
+                                  <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <span class="fw-medium">Angular Project</span></td>
+                                  <td>Albert Cook</td>
+                                  <td>
+                                    <p>Hello</p>
+                                  </td>
+                                  <td><span class="badge bg-label-primary me-1">Active</span></td>
+                                  <td>
+                                    <p>hello</p>
+                                  </td>
+                                  <td>
+                                    <p>hello</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                    <td>4.</td>
+                                  <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <span class="fw-medium">Angular Project</span></td>
+                                  <td>Albert Cook</td>
+                                  <td>
+                                    <p>Hello</p>
+                                  </td>
+                                  <td><span class="badge bg-label-primary me-1">Active</span></td>
+                                  <td>
+                                    <p>hello</p>
+                                  </td>
+                                  <td>
+                                    <p>hello</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                    <td>5.</td>
+                                  <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <span class="fw-medium">Angular Project</span></td>
+                                  <td>Albert Cook</td>
+                                  <td>
+                                    <p>Hello</p>
+                                  </td>
+                                  <td><span class="badge bg-label-primary me-1">Active</span></td>
+                                  <td>
+                                    <p>hello</p>
+                                  </td>
+                                  <td>
+                                    <p>hello</p>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          {{-- ! Pemetaan Secondary & Core Factor --}}
+                          <div class="table-responsive mt-5">
+                            <div><h4>Persentase Secondary & Core Factor</h4></div>
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                  <th>No.</th>
+                                  <th>Pendaftar</th>
+                                  <th>Core Factor</th>
+                                  <th>Secondary Factor</th>
+                                  <th>Nilai Akhir</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <span class="fw-medium">Angular Project</span></td>
+                                  <td>Albert Cook</td>
+                                  <td>
+                                    <p>Hello</p>
+                                  </td>
+                                  <td><span class="badge bg-label-primary me-1">Active</span></td>
+                                  <td>
+                                    <p>hello</p>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
 
                         {{-- ! Data kosong --}}
                         {{-- <div class="empty-message">

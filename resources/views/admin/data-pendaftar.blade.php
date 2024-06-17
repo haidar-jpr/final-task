@@ -89,7 +89,7 @@
                                     placeholder="Search..." aria-describedby="defaultFormControlHelp" />
                             </div>
                             <button class="btn btn-outline-primary" type="submit">Search</button>
-                            <a class="btn btn-dark ms-2" type="button" href="{{ url('admin/proses') }}">Proses Data</a>
+                            <a class="btn btn-dark ms-2" type="button" href="{{ url('admin/perhitungan_spk') }}">Perhitungan SPK</a>
                         </div>
 
                         {{-- ! Tabel pendaftar --}}

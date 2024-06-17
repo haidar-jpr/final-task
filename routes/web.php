@@ -55,7 +55,7 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
 
     Route::get('/admin/laporan', [AdminController::class, 'laporan'])->name('admin/laporan');
 
-    Route::get('/admin/proses', [AdminController::class, 'proses'])->name('admin/proses');
+    Route::get('/admin/perhitungan_spk', [AdminController::class, 'proses'])->name('admin/perhitungan_spk');
 
     Route::get('/admin/detail_perhitungan', [AdminController::class, 'perhitungan'])->name('admin/detail_perhitungan');
     
